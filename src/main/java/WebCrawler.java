@@ -51,7 +51,7 @@ public class WebCrawler {
             Pattern pattern = Pattern.compile(urlPattern);
             Matcher matcher = pattern.matcher(rawHTML);
 
-            breakPoint = getBReakpoint(breakPoint, matcher);
+            breakPoint = getBreakpoint(breakPoint, matcher);
 
             if (breakPoint == 0) {
                 break;
@@ -59,7 +59,7 @@ public class WebCrawler {
         }
     }
 
-    private int getBReakpoint(int breakPoint, Matcher matcher) {
+    private int getBreakpoint(int breakPoint, Matcher matcher) {
         while(matcher.find()) {
             String actualUrl = matcher.group();
 
